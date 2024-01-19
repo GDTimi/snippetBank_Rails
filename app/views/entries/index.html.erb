@@ -3,13 +3,17 @@
 <div style="display:flex gap:30px">
     <% @entries.each do |entry| %>
         <div>
-            <h4>
+            <h2>
                 <%= entry.title %>
-            </h4>
+            </h2>
 
             <p>
                 <%= entry.description %>
             </p>
+
+        <h3>Snippets</h3>
+        <%= render entry.snippets %>            
+
         </div>
     <% end %>
 
