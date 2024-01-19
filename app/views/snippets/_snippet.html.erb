@@ -1,11 +1,6 @@
-<p>
-    <strong>filename:</strong>
-    <%= snippet.filename %>
-</p>
-
-<p>
-    <strong>codesnippet:</strong>
-    <%= snippet.codesnippet %>
-</p>
+<div class="snippet-container">
+    <div class='snippet-filename'><%= snippet.filename %></div>
+    <textarea class='snippet-codeblock-mini' readonly><%= snippet.codesnippet %></textarea>
+</div>
 
 
