@@ -1,2 +1,16 @@
 <h1>snippetBank() entries</h1>
-<p>snippetBank entries will be displayed here.</p>
+
+<div style="display:flex gap:30px">
+    <% @entries.each do |entry| %>
+        <div>
+            <h4>
+                <%= entry.title %>
+            </h4>
+
+            <p>
+                <%= entry.description %>
+            </p>
+        </div>
+    <% end %>
+
+</div>
