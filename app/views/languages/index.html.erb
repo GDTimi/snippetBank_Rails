@@ -1,0 +1,16 @@
+<h1>Available Languages</h1>
+
+<div style="display:flex gap:30px">
+    <% @languages.each do |language| %>
+        <div>
+            <h4>
+                <%= language.name %>
+            </h4>
+
+            <p>
+                <%= language.is_active %>
+            </p>
+        </div>
+    <% end %>
+
+</div>
