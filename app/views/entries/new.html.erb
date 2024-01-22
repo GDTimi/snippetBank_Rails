@@ -1,7 +1,7 @@
 <h1 class="page-title">addNewEntry(?)</h1>
 
 <div class="form-container" id="form-container">
-    <%= form_with model: @entry do |form| %>
+    <%= form_with model: @entry, :html => {:class => 'form'} do |form| %>
     <div>
         <%= form.label :title %><br>
         <%= form.text_field :title %>
@@ -9,7 +9,7 @@
 
     <div>
         <%= form.label :description %><br>
-        <%= form.text_area :description %>
+        <%= form.text_field :description %>
     </div>
 
     <div>
