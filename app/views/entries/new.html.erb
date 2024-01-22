@@ -1,0 +1,19 @@
+<h1 class="page-title">addNewEntry(?)</h1>
+
+<div class="form-container" id="form-container">
+    <%= form_with model: @entry do |form| %>
+    <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.label :description %><br>
+        <%= form.text_area :description %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+    <% end %>
+</div>

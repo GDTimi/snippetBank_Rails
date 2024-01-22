@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "entries#index"
 
-  get "/", to: "entries#index"
+  resources :entries
 
 
   get "/languages", to: "languages#index"
