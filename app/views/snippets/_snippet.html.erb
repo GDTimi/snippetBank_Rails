@@ -1,6 +1,8 @@
 <div class="snippet-container">
     <div class='snippet-filename'><%= snippet.filename %></div>
     <textarea class='snippet-codeblock-mini' readonly><%= snippet.codesnippet %></textarea>
+
+    <%= render snippet.language %>
 </div>
 
 
