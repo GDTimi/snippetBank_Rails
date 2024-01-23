@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root "entries#index"
 
-  resources :entries
+  resources :entries do
+    resources :snippets
+  end
 
 
   get "/languages", to: "languages#index"
