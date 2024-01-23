@@ -1,16 +1,14 @@
 <div>
-<%= form_with model: snippet, :html => {:class => 'snippet-container'} do |form| %>
+<%# <%= form_with model: snippet, :html => {:class => 'snippet-container'} do |form| %> %>
+<%= form.fields_for :snippet, @entry.snippets.build, :html => {:class => 'snippet-container'} do |snippetForm| %>
   <p>
-    <%= form.label :filename %><br>
-    <%= form.text_field :filename %>
+    <%= snippetForm.label :filename %><br>
+    <%= snippetForm.text_field :filename %>
   </p>
   <p>
-    <%= form.label :codesnippet %><br>
-    <%= form.text_area :codesnippet, class: 'snippet-codeblock-mini' %>
+    <%= snippetForm.label :codesnippet %><br>
+    <%= snippetForm.text_area :codesnippet, class: 'snippet-codeblock-mini' %>
   </p>
 
-      <div>
-        <%= form.submit %>
-    </div>
 <% end %>
 </div>

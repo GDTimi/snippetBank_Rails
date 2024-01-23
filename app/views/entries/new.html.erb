@@ -1,16 +1,32 @@
 <h1 class="page-title">addNewEntry(?)</h1>
 
+
+
+<div class="form-container" id="form-container">
+    <%= form_with model: @entry, :html => {:class => 'form'} do |form| %>
+
 <!-- The main code snippet container, where snippets can be added and removed -->
 <div class ="entry-large">
     <h3>Snippet(s):</h3>
 
     <div id="snippet-hold">
-        <%= render "snippets/new", snippet: @snippet %>
+        <%# <%= render "snippets/new", snippet: @snippet %>
+
+        <%= form.fields_for :snippets, @entry.snippets.build, :html => {:class => 'snippet-container'} do |snippetForm| %>
+        <p>
+            <%= snippetForm.label :filename %><br>
+            <%= snippetForm.text_field :filename %>
+        </p>
+        <p>
+            <%= snippetForm.label :codesnippet %><br>
+            <%= snippetForm.text_area :codesnippet, class: 'snippet-codeblock-mini' %>
+        </p>
+
+        <% end %>
+
     </div>
 </div>
 
-<div class="form-container" id="form-container">
-    <%= form_with model: @entry, :html => {:class => 'form'} do |form| %>
     <div>
         <%= form.label :title %><br>
         <%= form.text_field :title %>
