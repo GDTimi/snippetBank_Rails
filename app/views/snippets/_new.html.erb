@@ -1,3 +1,16 @@
 <div>
-    "A new snippet will go here"
+<%= form_with model: snippet, :html => {:class => 'snippet-container'} do |form| %>
+  <p>
+    <%= form.label :filename %><br>
+    <%= form.text_field :filename %>
+  </p>
+  <p>
+    <%= form.label :codesnippet %><br>
+    <%= form.text_area :codesnippet, class: 'snippet-codeblock-mini' %>
+  </p>
+
+      <div>
+        <%= form.submit %>
+    </div>
+<% end %>
 </div>
