@@ -7,5 +7,8 @@
         <%= @entry.description %>
     </p>
 
-<%= render @entry.snippets %>            
+    <%= render @entry.snippets %>    
+
+    <%= button_to "Edit", edit_entry_path(@entry), method: :get %>
+
 </div>
