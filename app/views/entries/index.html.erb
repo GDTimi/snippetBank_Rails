@@ -2,17 +2,20 @@
 
 <div class="entries">
     <% @entries.each do |entry| %>
-        <div class ="entry">
-            <h3>
-                <%= entry.title %>
-            </h3>
+            <div class ="entry">
+                <h3>
+                    <%= entry.title %>
+                </h3>
 
-            <p class="entry-description">
-                <%= entry.description %>
-            </p>
+                <p class="entry-description">
+                    <%= entry.description %>
+                </p>
 
-        <%= render entry.snippets %>            
-        </div>
+            <%= render entry.snippets %>   
+
+            <a href="/entries/<%= entry.id %>"><button>View</button></a>
+         
+            </div>
     <% end %>
 
 </div>
