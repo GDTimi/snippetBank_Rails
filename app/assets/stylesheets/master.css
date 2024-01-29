@@ -31,10 +31,10 @@
 .ui-button-standard {
   text-decoration: none;
   font-size: 1.25rem;
-  padding: 4px 2px;
+  margin: 5px;
   border: solid 3px #aacfe4;
   border-radius: 10px;
-  min-width: 150px;
+  width: 150px;
 }
 
 .ui-button-delete {
@@ -169,7 +169,7 @@
   padding:4px 2px;
 }
 
-.form input, select{
+.form-input{
   display: block;
   font-size: 1.5rem;
   padding:4px 2px;

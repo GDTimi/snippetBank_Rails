@@ -10,7 +10,6 @@
     <%= render @entry.snippets %>    
 
     <div>
-    <%= button_to "Edit Entry", edit_entry_path(@entry), :class => 'ui-button-standard',  method: :get %>
+    <a href="<%= edit_entry_path(@entry) %>"><button class="ui-button-standard">Edit Entry</button></a>
     </div>
-
 </div>
