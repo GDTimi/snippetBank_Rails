@@ -28,13 +28,25 @@
     text-align: center;
 }
 
-button {
+.ui-button-standard {
   text-decoration: none;
   font-size: 1.25rem;
   padding: 4px 2px;
   border: solid 3px #aacfe4;
   border-radius: 10px;
   min-width: 150px;
+}
+
+.ui-button-delete {
+  display: block;
+  font-size: 1.5rem;
+  padding:4px 2px;
+  border:solid 3px #aacfe4;
+  background-color: lightcoral;
+  border-radius: 10px;
+  margin:2px 0px 10px 10px;
+  width: 25%;
+  min-width: 250px;
 }
 
 .entries { 

@@ -13,7 +13,7 @@
 
             <%= render entry.snippets %>   
 
-            <a href="<%= entry_path(entry) %>"><button>View Entry</button></a>
+            <%= button_to "View Entry", entry_path(entry), :class => 'ui-button-standard',  method: :get %>
          
             </div>
     <% end %>
