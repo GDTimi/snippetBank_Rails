@@ -16,7 +16,20 @@ class SnippetsController < ApplicationController
     @language = Language.find(params[:language_id])
     @snippet = @entry.snippets.create(snippet_params)
     redirect_to root_path
+  end
 
+  def edit
+    @snippet = Snippet.find(params[:id])
+  end
+
+  def update
+    @snippet = Snippet.find(params[:id])
+
+    if @snippet.update(snippet_params)
+      redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

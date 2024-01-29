@@ -33,9 +33,7 @@ class EntriesController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
-
   end
-
 
   private
   def entry_params
