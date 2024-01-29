@@ -17,6 +17,7 @@
 
         <div id="snippet-hold">
             <%# <%= render "snippets/new", snippet: @snippet %>
+            <%= render entry.snippets %>   
 
             <%= form.fields_for :snippets, entry.snippets.build, :html => {:class => 'snippet-container'} do |snippetForm| %>
             <p>
