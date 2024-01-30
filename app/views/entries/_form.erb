@@ -15,10 +15,10 @@
     <div class ="entry-large">
         <h3>Snippet(s):</h3>
 
-        <div id="snippet-hold">
-            <%# <%= render "snippets/new", snippet: @snippet %>
-            <%= render entry.snippets %>   
-
+        <div id="snippet-hold">            
+            <% entry.snippets.each do |snippet| %>
+                <%= render "snippets/form", snippet: snippet %>
+            <% end %>
         </div>
     </div>
 
