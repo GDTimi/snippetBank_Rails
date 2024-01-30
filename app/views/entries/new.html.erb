@@ -13,7 +13,7 @@
             <%= form.fields_for :snippets, @entry.snippets.build, :html => {:class => 'snippet-container'} do |snippetForm| %>
             <p>
                 <%= snippetForm.label :filename %><br>
-                <%= snippetForm.text_field :filename %>
+                <%= snippetForm.text_field :filename, :class => 'form-input' %>
             </p>
             <p>
                 <%= snippetForm.label :codesnippet %><br>
@@ -26,16 +26,16 @@
 
     <div>
         <%= form.label :title %><br>
-        <%= form.text_field :title %>
+        <%= form.text_field :title, :class => 'form-input' %>
     </div>
 
     <div>
         <%= form.label :description %><br>
-        <%= form.text_field :description %>
+        <%= form.text_field :description, :class => 'form-input' %>
     </div>
 
     <div>
-        <%= form.submit %>
+        <%= form.submit :class => 'ui-button-standard'  %>
     </div>
     <% end %>
 </div>

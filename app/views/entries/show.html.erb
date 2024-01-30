@@ -11,5 +11,10 @@
 
     <div>
     <a href="<%= edit_entry_path(@entry) %>"><button class="ui-button-standard">Edit Entry</button></a>
+
+    <%= button_to "Delete entry", entry_path(@entry), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure you want to delete this entry and associated snippets?"
+        }, :class => 'ui-button-delete',  method: :delete %>
     </div>
 </div>

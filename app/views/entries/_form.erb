@@ -19,18 +19,6 @@
             <%# <%= render "snippets/new", snippet: @snippet %>
             <%= render entry.snippets %>   
 
-            <%= form.fields_for :snippets, entry.snippets.build, :html => {:class => 'snippet-container'} do |snippetForm| %>
-            <p>
-                <%= snippetForm.label :filename %><br>
-                <%= snippetForm.text_field :filename, :class => 'form-input' %>
-            </p>
-            <p>
-                <%= snippetForm.label :codesnippet %><br>
-                <%= snippetForm.text_area :codesnippet, class: 'snippet-codeblock-mini' %>
-            </p>
-
-            <% end %>
-
         </div>
     </div>
 
