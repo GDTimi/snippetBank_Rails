@@ -1,16 +1,7 @@
-<h1>Available Languages</h1>
+<h1>Starred Languages</h1>
 
-<div style="display:flex gap:30px">
+<div class="language-container">
     <% @languages.each do |language| %>
-        <div>
-            <h4>
-                <%= language.name %>
-            </h4>
-
-            <p>
-                <%= language.is_active %>
-            </p>
-        </div>
+        <%= render "language", language: language %>
     <% end %>
-
 </div>
