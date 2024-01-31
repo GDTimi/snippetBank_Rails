@@ -110,7 +110,7 @@
 .snippet-codeblock-mini {
   width: 97%;
   height: 120px;
-  margin: 5px auto;
+  margin: 0px auto 5px auto;
   padding: 5px;
 
   text-align: left;
