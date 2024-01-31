@@ -108,11 +108,15 @@
 }
 
 .snippet-codeblock-mini {
-  width: 98%;
+  width: 97%;
   height: 120px;
+  margin: 5px auto;
   padding: 5px;
 
+  text-align: left;
   font-size: 1rem;
+  white-space: pre-wrap;
+  overflow-y: auto;
 
   resize: none;
 
